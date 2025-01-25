@@ -1,0 +1,38 @@
+# The following key bindings are configured to work with UA/RU keyboard layouts.
+# This ensures that the bindings are independent of the active language layout.
+
+# New instance Alacritty
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "Т"
+mods = "Super"
+
+# Forward search begins
+[[keyboard.bindings]]
+key = "А"
+mods = "Super"
+action = "SearchForward"
+
+# Backward search begins
+[[keyboard.bindings]]
+key = "П"
+mods = "Super"
+action = "SearchBackward"
+
+# Copy text
+[[keyboard.bindings]]
+key = "С"
+mods = "Super"
+action = "Copy"
+
+# Paste text
+[[keyboard.bindings]]
+key = "М"
+mods = "Super"
+action = "Paste"
+
+# Clear all history
+[[keyboard.bindings]]
+key = "Д"
+mods = "Super"
+action = "ClearHistory"

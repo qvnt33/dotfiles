@@ -1,0 +1,43 @@
+[env]
+TERM = "xterm-256color"
+COLORTERM = "truecolor"
+LANG = "en_US.UTF-8"
+
+[general]
+working_directory = "None"
+import = [
+    "~/.config/alacritty/dracula.toml",
+    "~/.config/alacritty/shortcuts.toml",
+]
+
+[window]
+opacity = 0.96
+
+dynamic_padding = true
+padding.x = 10
+padding.y = 10
+
+startup_mode = "Windowed"
+dynamic_title = true
+
+dimensions.columns = 90
+dimensions.lines = 30
+
+[scrolling]
+multiplier = 3
+history = 5000
+
+[cursor]
+style = "Block"
+
+[mouse]
+hide_when_typing = true
+
+[font]
+size = 15.0
+normal.family = "SauceCodePro Nerd Font"
+normal.style = "Regular"
+bold.family = "SauceCodePro Nerd Font"
+bold.style = "Bold"
+italic.family = "SauceCodePro Nerd Font"
+italic.style = "Italic"

@@ -1,0 +1,97 @@
+# New instance Alacritty
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "N"
+mods = "Super"
+
+# Delete the current line
+[[keyboard.bindings]]
+chars = "\u0015"
+key = "Backspace"
+mods = "Super"
+
+# Moves cursor back one word
+[[keyboard.bindings]]
+chars = "\u001Bb"
+key = "Left"
+mods = "Alt"
+
+# Moves cursor forward one word
+[[keyboard.bindings]]
+chars = "\u001Bf"
+key = "Right"
+mods = "Alt"
+
+# Moves cursor to beginning of line
+[[keyboard.bindings]]
+chars = "\u001BOH"
+key = "Left"
+mode = "AppCursor"
+mods = "Super"
+
+# Moves cursor to end of line
+[[keyboard.bindings]]
+chars = "\u001BOF"
+key = "Right"
+mode = "AppCursor"
+mods = "Super"
+
+# Cursor moves to beginning of story
+[[keyboard.bindings]]
+key = "Up"
+mods = "Super"
+action = "ScrollToTop"
+
+# Cursor moves to end of story
+[[keyboard.bindings]]
+key = "Down"
+mods = "Super"
+action = "ScrollToBottom"
+
+# Forward search begins
+[[keyboard.bindings]]
+key = "F"
+mods = "Super"
+action = "SearchForward"
+
+# Backward search begins
+[[keyboard.bindings]]
+key = "G"
+mods = "Super"
+action = "SearchBackward"
+
+# Copy text
+[[keyboard.bindings]]
+key = "C"
+mods = "Super"
+action = "Copy"
+
+# Paste text
+[[keyboard.bindings]]
+key = "V"
+mods = "Super"
+action = "Paste"
+
+# Font size increases
+[[keyboard.bindings]]
+key = "Equals"
+mods = "Super"
+action = "IncreaseFontSize"
+
+# Font size decreases
+[[keyboard.bindings]]
+key = "Minus"
+mods = "Super"
+action = "DecreaseFontSize"
+
+# Font size is reset to standard
+[[keyboard.bindings]]
+key = "0"
+mods = "Super"
+action = "ResetFontSize"
+
+# Clear all history
+[[keyboard.bindings]]
+key = "L"
+mods = "Super"
+action = "ClearHistory"
