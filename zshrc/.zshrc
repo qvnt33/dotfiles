@@ -52,13 +52,25 @@ alias pi="pip install"
 alias venv="source .venv/bin/activate"
 alias venvd="deactivate"
 
+# gs = git status
+# gs "name" = git switch "name"
+unalias gs 2>/dev/null
+gs() {
+  if [[ -z "$1" ]]; then
+    git status
+  else
+    git switch "$1"
+  fi
+}
+
 # Aliases for Git
 alias g="git"
-alias gs="git status"
-alias gsw="git switch"
+# alias gs="git status"
+# alias gsw="git switch"
 alias gpo="git push origin"
 alias ga="git add"
 alias gc="git commit -m"
+alias gcm="git commit -m"
 # Merging the main and develop branches and sending changes to the remote repository
 alias gswm="git switch main && git merge develop && git push origin main develop"
 alias gswd="git switch develop && git merge main && git push origin main develop"
@@ -83,6 +95,13 @@ alias fcd="cd \$(find . -type d | fzf)"  # Directory search and opening it in te
 alias fe="fzf | xargs -o $EDITOR"  # File search and open it in code-editor
 alias fh="history | sort -r | fzf"  # History search
 alias frm="find . -type f | fzf | xargs trash-put"  # Search file and remove it with trash-cli (safe)
+
+# Aliases trash
+alias tp="trash-put"
+alias te="trash-empty"
+alias tr="trash-restore"
+alias tl="trash-list"
+alias tr="trash-rm"
 
 # Aliases misc
 alias cls="clear"
