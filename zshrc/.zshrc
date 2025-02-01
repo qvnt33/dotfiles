@@ -1,5 +1,5 @@
 export ZSH="$HOME/.oh-my-zsh"  # Path to oh-my-zsh
-export XHUB="/Users/qx3kk/xHub"  # Main directory xHub
+export XHUB="/Users/hal9000/xHub"  # Main directory xHub
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 export EDITOR='nano'  # Default text editor (nano/vim/code)
@@ -112,3 +112,7 @@ alias myip="curl -s ifconfig.me; echo"
 alias speedtest="speedtest-cli"
 alias rg="rg --ignore-case"  # ripgrep ignore case during
 alias pony="echo 'hint' | bat"  # Displaying a text hints
+
+# Created by `pipx` on 2025-01-31 19:02:33
+export PATH="$PATH:/Users/hal9000/.local/bin"
+alias nfsmw="open \"/Applications/Need for Speed Most Wanted.app/Contents/MacOS/WineskinLauncher\""
