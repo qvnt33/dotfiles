@@ -16,6 +16,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 source $ZSH/oh-my-zsh.sh
@@ -52,24 +54,13 @@ alias pi="pip install"
 alias venv="source .venv/bin/activate"
 alias venvd="deactivate"
 
-# gs = git status
-# gs "name" = git switch "name"
-unalias gs 2>/dev/null
-gs() {
-  if [[ -z "$1" ]]; then
-    git status
-  else
-    git switch "$1"
-  fi
-}
-
 # Aliases for Git
 alias g="git"
-# alias gs="git status"
-# alias gsw="git switch"
+alias gst="git status"
+alias gs="git status"
+alias gsw="git switch"
 alias gpo="git push origin"
 alias ga="git add"
-alias gc="git commit -m"
 alias gcm="git commit -m"
 # Merging the main and develop branches and sending changes to the remote repository
 alias gswm="git switch main && git merge develop && git push origin main develop"
@@ -112,7 +103,3 @@ alias myip="curl -s ifconfig.me; echo"
 alias speedtest="speedtest-cli"
 alias rg="rg --ignore-case"  # ripgrep ignore case during
 alias pony="echo 'hint' | bat"  # Displaying a text hints
-
-# Created by `pipx` on 2025-01-31 19:02:33
-export PATH="$PATH:/Users/hal9000/.local/bin"
-alias nfsmw="open \"/Applications/Need for Speed Most Wanted.app/Contents/MacOS/WineskinLauncher\""
