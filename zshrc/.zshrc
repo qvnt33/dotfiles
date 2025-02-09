@@ -20,10 +20,6 @@ fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-source $ZSH/oh-my-zsh.sh
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $ZSH/custom/plugins/fzf-tab/fzf-tab.plugin.zsh
-
 # Autocomplete options
 CASE_SENSITIVE="false"  # Ignore case during autocompletion
 HYPHEN_INSENSITIVE="false"  # Consider the symbols "-" and "_" as different
@@ -41,6 +37,10 @@ plugins=(
   zsh-autosuggestions
   you-should-use
 )
+
+source $ZSH/oh-my-zsh.sh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZSH/custom/plugins/fzf-tab/fzf-tab.plugin.zsh
 
 autoload -U compinit && compinit  # Zsh autocomplete options
 
