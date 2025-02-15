@@ -1,10 +1,11 @@
-# Aliases for Python
+# Python
 alias py="python3"
-alias pi="pip install"
+alias pi="pip3 install"
+alias pl="pip3 list"
 alias venv="source .venv/bin/activate"
 alias venvd="deactivate"
 
-# Aliases for Git
+# Git
 alias g="git"
 alias gst="git status"
 alias gs="git status"
@@ -12,44 +13,50 @@ alias gsw="git switch"
 alias gpo="git push origin"
 alias ga="git add"
 alias gcm="git commit -m"
-# Merging the main and develop branches and sending changes to the remote repository
+
+# Custom Git Push
 alias gswm="git switch main && git merge develop && git push origin main develop"
 alias gswd="git switch develop && git merge main && git push origin main develop"
 
-# Aliases for work with directories
+# Work with directories
 alias mkcd="mkdir -p '$1' && cd '$1'"
 alias cdpr="cd $XHUB/programming_ws"
 alias cdpj="cd $XHUB/programming_ws/projects_ws"
 alias cdsb="cd $XHUB/programming_ws/projects_ws/sandbox_py"
 alias cddw="cd $HOME/Downloads"
 alias cdx="cd $XHUB"  # Change to xHub root directory
+
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 
-# Aliases FZF
-alias fs="fzf | xargs bat"  # File search and open it in terminal
-alias fo="find . -type d | fzf | xargs open"  # Directory search and opening it in Finder
-alias ff="find . -type f | fzf"  # Improved file search
-alias fd="find . -type d | fzf"  # Improved directory search
-alias fcd="cd \$(find . -type d | fzf)"  # Directory search and opening it in terminal
-alias fe="fzf | xargs -o $EDITOR"  # File search and open it in code-editor
-alias fh="history | sort -r | fzf"  # History search
-alias frm="find . -type f | fzf | xargs trash-put"  # Search file and remove it with trash-cli (safe)
+# FZF files
+alias ff="find . -type f | fzf"  # File search
+alias fff="find . -type f | fzf | xargs bat"  # File search and open it in terminal
+alias ffe="find . -type f | fzf | xargs -o $EDITOR"  # File search and open it in code-editor
+alias ffrm="find . -type f | fzf | xargs trash-put"  # File search and remove it with trash-cli (safe)
 
-# Aliases trash
+# FZF directories
+alias dd="find . -type d | fzf"  # Directory search
+alias ddd="cd \$(find . -type d | fzf)"  # Directory search and opening it in terminal
+alias ddf="find . -type d | fzf | xargs open"  # Directory search and opening it in Finder
+
+# FZF misc
+alias ffh="history | sort -r | fzf"  # History search
+
+# trash-cli
 alias tp="trash-put"
 alias te="trash-empty"
 alias tr="trash-restore"
 alias tl="trash-list"
 alias tr="trash-rm"
 
-# Aliases misc
+# Misc
 alias cls="clear"
-alias reload="source ~/.zshrc; echo 'ZSH Reloaded!'"  # Reload zsh configuration
-alias ll="eza --tree --level=1 --icons=auto --no-user --no-permissions --sort type"  # Improved ls
 alias cat="bat"  # Improved cat
-alias myip="curl -s ifconfig.me; echo"
-alias speedtest="speedtest-cli"
-alias rg="rg --ignore-case"  # ripgrep ignore case during
+alias ll="eza --tree --level=1 --icons=auto --no-user --no-permissions --sort type"  # Improved ls
+
+alias reload="source ~/.zshrc; echo 'ZSH Reloaded!'"  # Reload zsh configuration
 alias pony="echo 'hint' | bat"  # Displaying a text hints
+
+alias myip="curl -s ifconfig.me; echo"
