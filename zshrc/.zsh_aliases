@@ -55,6 +55,7 @@ alias tr="trash-rm"
 alias cls="clear"
 alias cat="bat"  # Improved cat
 alias ll="eza --tree --level=1 --icons=auto --no-user --no-permissions --sort type"  # Improved ls
+alias lla="eza --tree --level=1 --icons=auto --no-user --no-permissions --sort type -a"  # Improved ls with -a
 
 alias reload="source ~/.zshrc; echo 'ZSH Reloaded!'"  # Reload zsh configuration
 alias pony="echo 'hint' | bat"  # Displaying a text hints

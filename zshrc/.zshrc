@@ -45,11 +45,11 @@ plugins=(
   zsh-completions
   zsh-autosuggestions
   you-should-use
+  zsh-syntax-highlighting
 )
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 source $ZSH/oh-my-zsh.sh
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $ZSH/custom/plugins/fzf-tab/fzf-tab.plugin.zsh
 
 # Autoload and autocomplete
 autoload -U compinit && compinit  # Zsh autocomplete options
