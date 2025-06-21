@@ -1,0 +1,4 @@
+﻿NumpadDel::
+NumpadDot::
+    Send, .
+return
